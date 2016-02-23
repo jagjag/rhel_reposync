@@ -1,4 +1,25 @@
+
 #!/bin/bash
+#
+#   HQ ITD 
+#
+#  Linux support   
+#
+#  inner line No. :
+#
+
+
+#  v 1.0
+#      
+#  v 1.1
+#      add selinux 
+#      add find and clean
+
+
+
+
+
+
 
 repo_base=/home/reposync
 synclog=${repo_base}/log/sync.log.`date '+%Y%m%d'`
