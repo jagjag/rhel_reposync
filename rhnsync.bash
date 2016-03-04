@@ -39,8 +39,7 @@ do
     /bin/env reposync  -m -g -n -p ${syncpath} -r ${i}
     echo "reposync complete"  >>${synclog}
 
-    rhelVersion=`rpm -qa redhat-release-server | awk -F '-' '{print $4}' | awk -F '.' '{print $1}'`
-    if [[ -z ${rhelVersion} ]]
+    if $(echo i | grep 'rhel-5' )
     then
         echo "createrepo rhel5 "  >>${synclog}
         /bin/env createrepo  -s sha1 --update -d -p ${syncpath}/${i} -o ${syncpath}/${i} 1>>${synclog}  2>&1
