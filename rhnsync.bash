@@ -39,7 +39,7 @@ do
     /bin/env reposync  -m -g -n -p ${syncpath} -r ${i}
     echo "reposync complete"  >>${synclog}
 
-    if $(echo $i | grep 'rhel-5' )
+    if echo $i | grep 'rhel-5'
     then
         echo "createrepo rhel5 "  >>${synclog}
         /bin/env createrepo  -s sha1 --update -d -p ${syncpath}/${i} -o ${syncpath}/${i} 1>>${synclog}  2>&1
